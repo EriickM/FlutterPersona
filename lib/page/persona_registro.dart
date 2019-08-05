@@ -26,6 +26,7 @@ class _PersonaRegistroState extends State<PersonaRegistro> {
     }
 
     return Scaffold(
+      key: scaffoldKey,
       appBar: _crearTitulo(),
       body: SingleChildScrollView(
         child: formularios(context),
@@ -131,8 +132,8 @@ class _PersonaRegistroState extends State<PersonaRegistro> {
 
     formKey.currentState.save();
     personaBloc.agregarContacto(persona);
-    Navigator.pop(context);
-    //_mostrarSnack('Registro Guardo');
+    //Navigator.pop(context);
+    _mostrarSnack('Registro Guardo');
 
   }
 
