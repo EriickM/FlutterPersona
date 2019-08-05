@@ -12,7 +12,7 @@ class _PersonaRegistroState extends State<PersonaRegistro> {
   final formKey        = GlobalKey<FormState>();
   final scaffoldKey    = GlobalKey<ScaffoldState>();
   PersonaModel persona = new PersonaModel();
-  PersonaBloc personaBloc;
+  PersonaBloc personaBloc = new PersonaBloc();
 
 
   @override
@@ -131,7 +131,8 @@ class _PersonaRegistroState extends State<PersonaRegistro> {
 
     formKey.currentState.save();
     personaBloc.agregarContacto(persona);
-    _mostrarSnack('Registro Guardo');
+    Navigator.pop(context);
+    //_mostrarSnack('Registro Guardo');
 
   }
 
